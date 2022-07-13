@@ -3,7 +3,7 @@ package com.example.demo.Entity;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.UUID;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class User {
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String userID;
+	private UUID userID;
 	private String userName;
 	private String userImage;
 	private boolean active;
