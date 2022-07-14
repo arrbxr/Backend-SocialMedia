@@ -32,11 +32,11 @@ public class User {
 	@JoinColumn(name = "us_po", referencedColumnName = "userID")
 	List<Post> posts = new ArrayList<>();
 
-	public String getUserID() {
+	public UUID getUserID() {
 		return userID;
 	}
 
-	public void setUserID(String userID) {
+	public void setUserID(UUID userID) {
 		this.userID = userID;
 	}
 
