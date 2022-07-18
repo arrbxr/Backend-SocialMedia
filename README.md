@@ -12,7 +12,6 @@
 9.  IDE : Spring Tool Suite 4 (Version: 4.15.1.RELEASE)
 10.  Java version: 17.0.3
 11. Postman (version 9.4)
-12. 
 
 # Architecture
 
