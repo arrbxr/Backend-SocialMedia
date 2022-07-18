@@ -23,7 +23,7 @@ public class PostService {
 		long time = date.getTime();
 		Timestamp dateTime = new Timestamp(time);
 
-		postData.setPostID(UUID.randomUUID());
+		postData.setPostID((long)(Math.random()*100));
 		postData.setLikes(0);
 		postData.setDateTime(dateTime);
 
@@ -37,7 +37,7 @@ public class PostService {
 		return result;
 	}
 
-	public ArrayList<Post> deletePostFromDB(UUID postID) {
+	public ArrayList<Post> deletePostFromDB(Long postID) {
 		postRepo.deleteById(postID);
 
 		//ArrayList<Post> result = retrivePostFromDB();

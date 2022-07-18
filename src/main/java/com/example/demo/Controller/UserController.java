@@ -1,7 +1,6 @@
 package com.example.demo.Controller;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 import com.example.demo.Entity.User;
 import com.example.demo.Service.UserService;
@@ -40,7 +39,7 @@ public class UserController {
 	}
 
 	@GetMapping("/apiAllUsers/{userID}")
-	public User getUserDetail(@PathVariable("userID") UUID userID) {
+	public User getUserDetail(@PathVariable("userID") Long userID) {
 		logger.info("User service apiAllUsers hit ..........");
 		return userService.getUserData(userID);
 	}

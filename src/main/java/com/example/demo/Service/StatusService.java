@@ -3,7 +3,6 @@ package com.example.demo.Service;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.UUID;
 
 import com.example.demo.Entity.Status;
 import com.example.demo.Repository.StatusRepository;
@@ -23,7 +22,7 @@ public class StatusService {
 		long time = date.getTime();
 		Timestamp dateTime = new Timestamp(time);
 
-		status.setStatusID(UUID.randomUUID());
+		status.setStatusID((long)Math.random()*100);
 		status.setUploadTIme(dateTime);
 		return statusRepo.save(status);
 	}

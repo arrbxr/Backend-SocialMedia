@@ -3,7 +3,6 @@ package com.example.demo.Entity;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -12,12 +11,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name = "User")
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 	@Id
 	// @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID userID;
+	private Long userID;
 	private String userName;
 	private String userImage;
 	private boolean active;
@@ -33,92 +41,5 @@ public class User {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "us_co", referencedColumnName = "userID")
-	List<Comment> comment = new ArrayList<>();
-
-	public UUID getUserID() {
-		return userID;
-	}
-
-	public void setUserID(UUID userID) {
-		this.userID = userID;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserImage() {
-		return userImage;
-	}
-
-	public void setUserImage(String userImage) {
-		this.userImage = userImage;
-	}
-
-	public boolean isActive() {
-		return active;
-	}
-
-	public void setActive(boolean active) {
-		this.active = active;
-	}
-
-	public Timestamp getJoiningDate() {
-		return joiningDate;
-	}
-
-	public void setJoiningDate(Timestamp joiningDate) {
-		this.joiningDate = joiningDate;
-	}
-
-	public List<Status> getStatus() {
-		return status;
-	}
-
-	public void setStatus(List<Status> status) {
-		this.status = status;
-	}
-
-	public List<Post> getPosts() {
-		return posts;
-	}
-
-	public void setPosts(List<Post> posts) {
-		this.posts = posts;
-	}
-
-	public List<Comment> getComment() {
-		return comment;
-	}
-
-	public void setComment(List<Comment> comment) {
-		this.comment = comment;
-	}
-
-	public User(UUID userID, String userName, String userImage, boolean active, Timestamp joiningDate,
-			List<Status> status, List<Post> posts, List<Comment> comment) {
-		super();
-		this.userID = userID;
-		this.userName = userName;
-		this.userImage = userImage;
-		this.active = active;
-		this.joiningDate = joiningDate;
-		this.status = status;
-		this.posts = posts;
-		this.comment = comment;
-	}
-
-	public User() {
-		super();
-		//TODO Auto-generated constructor stub
-	}
-	
-	
-	
-	
-	
+	List<Comment> comment = new ArrayList<>();	
 }

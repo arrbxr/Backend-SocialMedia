@@ -34,7 +34,7 @@ public class CommentController {
 	}
 
 	@GetMapping("/getAllComments/{postID}")
-	public ArrayList<Comment> getAllComments(@PathVariable("postID") UUID postID) {
+	public ArrayList<Comment> getAllComments(@PathVariable("postID") Long postID) {
 		logger.info("comment service getAllComments hit ................");
 		return commentService.getAllComment(postID);
 

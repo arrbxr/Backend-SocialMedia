@@ -3,7 +3,6 @@ package com.example.demo.Service;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.UUID;
 
 import com.example.demo.Entity.User;
 import com.example.demo.Repository.UserRepository;
@@ -22,7 +21,7 @@ public class UserService {
 		long time = date.getTime();
 		Timestamp dateTime = new Timestamp(time);
 
-		user.setUserID(UUID.randomUUID());
+		user.setUserID((long)(Math.random()*100));
 		user.setActive(true);
 		user.setJoiningDate(dateTime);
 
@@ -33,7 +32,7 @@ public class UserService {
 		return userRepository.findAll();
 	}
 
-	public User getUserData(UUID userID) {
+	public User getUserData(Long userID) {
 		return userRepository.findAllByuserID(userID);
 	}
 }

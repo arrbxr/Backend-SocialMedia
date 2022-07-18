@@ -26,7 +26,7 @@ public class StatusController {
 	static Logger logger = LogManager.getLogger(StatusController.class);
 
 	@PostMapping("/save")
-	public Status saveStatus(@RequestBody Status status) {
+	public Status saveStatus(@RequestBody Status status){
 		logger.info("status service save hit ................");
 		return statusService.saveStatus(status);
 	}

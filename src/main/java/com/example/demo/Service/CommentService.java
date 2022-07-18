@@ -25,12 +25,12 @@ public class CommentService {
 		long time = date.getTime();
 		Timestamp dateTime = new Timestamp(time);
 
-		comment.setCommentID(UUID.randomUUID());
+		comment.setCommentID((long)Math.random()*100);
 		comment.setTimestamp(dateTime);
 		return commentRepo.save(comment);
 	}
 
-	public ArrayList<Comment> getAllComment(UUID postID) {
+	public ArrayList<Comment> getAllComment(Long postID) {
 		ArrayList<Comment> result = new ArrayList<Comment>();
 		result = commentRepo.findAllByPostID(postID);
 		return result;
