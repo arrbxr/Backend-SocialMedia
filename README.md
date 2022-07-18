@@ -38,3 +38,7 @@
 3. The logging level is info.
 4. Destination is console and external log file in the drive.
 5. For all the endpoints, loggings will be done.
+
+# ER Diagram
+<br>
+<img src ="https://github.com/Siddhanttimeline/Backend-SocialMedia/blob/main/ER%20final.png ">
