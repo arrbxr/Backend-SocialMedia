@@ -7,10 +7,11 @@
 4.  REST Repositories 
 5.  MySQL Database
 6.  Maven (version 3.8.5)
-7.  Log4j2 
-8.  IDE : Spring Tool Suite 4 (Version: 4.15.1.RELEASE)
-9.  Java version: 17.0.3
-10. Postman (version 9.4)
+7.  Log4j2
+8.  Lombok (version 1.18.24)
+9.  IDE : Spring Tool Suite 4 (Version: 4.15.1.RELEASE)
+10.  Java version: 17.0.3
+11. Postman (version 9.4)
 
 # Architecture
 
