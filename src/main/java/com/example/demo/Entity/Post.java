@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -16,6 +17,7 @@ import javax.persistence.Table;
 @Table(name = "Post")
 public class Post {
 	@Id
+	@Column(columnDefinition = "VARBINARY(16)")
 	private UUID postID;
 	private String userName;
 	private String imageURL;
@@ -23,7 +25,7 @@ public class Post {
 	private String postImgURL;
 	private int likes;
 	private Timestamp dateTime;
-	
+
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "po_co", referencedColumnName = "postID")
 	List<Comment> comments = new ArrayList<>();
@@ -107,10 +109,7 @@ public class Post {
 
 	public Post() {
 		super();
-		//TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
+
 }

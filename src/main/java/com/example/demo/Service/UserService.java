@@ -3,12 +3,13 @@ package com.example.demo.Service;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.UUID;
 
 import com.example.demo.Entity.User;
 import com.example.demo.Repository.UserRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
@@ -21,6 +22,7 @@ public class UserService {
 		long time = date.getTime();
 		Timestamp dateTime = new Timestamp(time);
 
+		user.setUserID(UUID.randomUUID());
 		user.setActive(true);
 		user.setJoiningDate(dateTime);
 
@@ -31,8 +33,7 @@ public class UserService {
 		return userRepository.findAll();
 	}
 
-	public User getUserData(String userID) {
+	public User getUserData(UUID userID) {
 		return userRepository.findAllByuserID(userID);
 	}
-
 }

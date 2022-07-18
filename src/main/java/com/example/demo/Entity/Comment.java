@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Comment")
 public class Comment {
-	
+
 	@Id
 	private UUID commentID;
 	private UUID postID;
@@ -64,7 +64,7 @@ public class Comment {
 
 	public void setTimestamp(Timestamp dateTime) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

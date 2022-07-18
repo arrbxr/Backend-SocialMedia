@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.example.demo.Entity.Post;
 import com.example.demo.Repository.PostRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class PostService {
@@ -40,8 +40,11 @@ public class PostService {
 	public ArrayList<Post> deletePostFromDB(UUID postID) {
 		postRepo.deleteById(postID);
 
-		ArrayList<Post> result = retrivePostFromDB();
-		return result;
+		//ArrayList<Post> result = retrivePostFromDB();
+		//return result;
+		 return postRepo.findAll();
+		
+		
 	}
 
 }
