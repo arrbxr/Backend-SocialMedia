@@ -19,7 +19,7 @@
 3. Repository layer
 4. Model layer
 
-# STEPS (REST Api)
+# STEPS (REST API)
 1. Created 4 controllers(user, post, status and comment)
 2. Created the get, post and delete mappings for the end points.
 3. From Controller the program flow goes to the service class.
