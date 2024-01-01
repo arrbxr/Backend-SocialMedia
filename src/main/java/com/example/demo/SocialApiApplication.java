@@ -10,6 +10,6 @@ public class SocialApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SocialApiApplication.class, args);
-		System.out.println("Running !");
+		System.out.println("Running Successfuly!");
 	}
 }
